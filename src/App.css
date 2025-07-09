@@ -36,3 +36,68 @@
     transform: rotate(360deg);
   }
 }
+
+/* Container for greeting and profile image side by side */
+.greeting-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: #f8f9fa;
+  padding: 12px 25px;
+  border-radius: 40px;
+  box-shadow: 0 6px 15px rgba(102, 16, 242, 0.15);
+  user-select: none;
+}
+
+/* Gradient text with subtle shadow */
+.greeting-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+/* Profile image with glow and smooth scale animation on hover */
+.profile-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  box-shadow: 0 0 12px rgba(102, 16, 242, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-img:hover {
+  transform: scale(1.15);
+  border-color: #6610f2;
+  box-shadow: 0 0 20px #6610f2, 0 0 40px #6610f2;
+}
+/* Product Card Styling */
+.product-card {
+  width: 22rem;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #ffffff, #f1f3f5);
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: If your image stretches oddly, fix it */
+.product-card img {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+  border-bottom: 1px solid #dee2e6;
+}
+
